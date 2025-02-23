@@ -1,10 +1,19 @@
 package org.example;
 
+import java.time.LocalDate;
+
 public class Package {
     private String location;
     private int distance;
     private int value;
-    private int deliveryDate;
+    private LocalDate deliveryDate;
+
+    public Package(String location, int distance, int value, LocalDate deliveryDate) {
+        this.location = location;
+        this.distance = distance;
+        this.value = value;
+        this.deliveryDate = deliveryDate;
+    }
 
     public String getLocation() {
         return location;
@@ -18,7 +27,7 @@ public class Package {
         return value;
     }
 
-    public int getDeliveryDate() {
+    public LocalDate getDeliveryDate() {
         return deliveryDate;
     }
 }
